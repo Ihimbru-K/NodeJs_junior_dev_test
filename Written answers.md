@@ -1,4 +1,39 @@
+# Part 2 (Written Questions)
 
+## Question 2.2 : Code Review
+
+## Issues and proposed improvements in the Code
+
+1. **Missing input validation:** input data should be validated in order to prevent unexpected behavior or security vulnerabilities.
+
+2. **Lack of error handling:**  errors should be handled during the `db.addUser(user)` operation to avoid unhandled exceptions and crashes.
+
+3. **Inconsistent response status codes:** We should use consistent status code (e.g., 201 - Created) for successful user addition and provide meaningful response messages.
+
+4. **Lack of error messages for clients:** The code should be modified to provide descriptive error messages to help clients understand issues.
+
+5. **Inefficient database call:** The code can be modified to use asynchronous operations to avoid blocking the event loop and improve scalability.
+
+6. **Code organization and readability:** We can improve the formatting and organization of that code  for better readability and maintainability.
+
+I think by addressing these issues and implementing the proposed improvements, the code can become more robust, maintainable, and client-friendly.
+
+
+## Issues and Improvements in the Code
+
+1. **Missing input validation:** Validate input data to prevent unexpected behavior or security vulnerabilities.
+
+2. **Lack of error handling:** Handle errors during the `db.addUser(user)` operation to avoid unhandled exceptions and crashes.
+
+3. **Inconsistent response status codes:** Use a consistent status code (e.g., 201 - Created) for successful user addition and provide meaningful response messages.
+
+4. **Lack of error messages for clients:** Provide descriptive error messages to help clients understand issues.
+
+5. **Inefficient database call:** Use asynchronous operations to avoid blocking the event loop and improve scalability.
+
+6. **Code organization and readability:** Improve code formatting and organization for better readability and maintainability.
+
+By addressing these issues and implementing the proposed improvements, the code can become more robust, maintainable, and client-friendly.
 
 # Part 3 (Time Management Task)
 
