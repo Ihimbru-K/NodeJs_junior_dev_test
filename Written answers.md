@@ -1,8 +1,8 @@
 
 
-## Part 3 (Time Management Task)
+# Part 3 (Time Management Task)
 
-# Task Prioritization and Timeline
+## Task Prioritization and Timeline
 
 ## Tasks to be completed
 
