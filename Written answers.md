@@ -1,5 +1,37 @@
 # Part 2 (Written Questions)
 
+## Question 2.1 : Explaining my decision
+## Code Structure Explanation
+
+I structured this code using the Express.js framework. Here are some of the reasons for which I structured my code this way:
+
+1. **Modularity**: I divided this code into separate sections for different functionalities. The required modules and dependencies are imported at the beginning of the code, and each section handles a specific task, such as user registration and login, book operations, authentication middleware, etc. This modular structure improves code organization, readability, and maintainability.
+
+2. **Routing**: I defined various HTTP routes using Express's routing capabilities. The app handles different HTTP methods (GET, POST, PUT, DELETE) and routes requests to the corresponding route handlers. For example, the `/register` route handles user registration, the `/login` route handles user login, and the `/books` routes handle book-related operations.
+
+3. **User Authentication**: I included user registration and login functionality. When a user registers, their password is hashed using bcrypt for security. During login, the provided username and password are checked against the stored user information, and if valid, a JSON Web Token (JWT) is generated and sent back to the client. This ensures secure user authentication.
+
+4. **Book Operations**: The code provides CRUD (Create, Read, Update, Delete) operations for books. It includes routes for retrieving all books, creating a new book, retrieving a specific book by ID, updating a specific book, and deleting a specific book. These routes are protected using the `authenticateToken` middleware function, which verifies the JWT token before allowing access to the routes.
+
+Differences in a Production Environment:
+
+In a production environment, I would make the following improvements:
+
+1. **Environment Configuration**: Instead of hardcoding sensitive information like JWT secret and database credentials like I did, it's recommended to use environment variables. The code can be configured to read these variables from a `.env` file or from the server environment, ensuring better security and flexibility.
+
+2. **Database Integration**: For a production-ready application, it's common to use a database to store user information and book data. The code can be modified to integrate with a database system like MongoDB, MySQL, or PostgreSQL. This allows for efficient data storage, retrieval, and management.
+
+3. **Error Handling and Validation**: The code can be enhanced with comprehensive error handling and input validation mechanisms. This ensures that proper error messages are returned to the client in case of failures, and input data is validated to prevent malicious or incorrect data from being processed.
+
+4. **Logging and Monitoring**: Logging is essential in a production environment for debugging, monitoring, and performance analysis. Incorporating a logging library like Winston or Bunyan can help capture logs for different events and errors. Additionally, monitoring tools like Prometheus or New Relic can be used to track server performance, response times, and resource usage.
+
+5. **Security Enhancements**: In a production environment, it's crucial to implement additional security measures. This may include enabling HTTPS for secure communication, implementing rate limiting to protect against brute-force attacks, and adding input sanitization to prevent common security vulnerabilities like SQL injection or cross-site scripting (XSS).
+
+6. **Caching and Performance Optimization**: Depending on the requirements, caching mechanisms like Redis or Memcached can be used to improve performance by caching frequently accessed data. Additionally, performance optimization techniques such as compressing responses, using CDNs (Content Delivery Networks), or implementing pagination can be employed to enhance the application's speed and scalability.
+
+These some considerations which I think are necessary for improving the code for a production environment.
+
+
 ## Question 2.2 : Code Review
 
 ## Issues and proposed improvements in the Code
